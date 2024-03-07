@@ -6,13 +6,13 @@ export const Kitchen = () => {
   const data = useSelector((state) => state.common.kitchen)
   return (
     <>
-      <section>
+      <section className='py-20'>
         <div className="container">
           <h1 className='text-3xl my-3'>КУХНИ</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
             {
               data?.map((item, index) => (
-                <div className="flex flex-col justify-between " key={index}>
+                <div className=" card flex flex-col justify-between " key={index}>
                   <img src={item.image} className='w-full' alt={item.title} />
                   <div className='p-3 flex flex-col gap-5 justify-between h-full'>
                     <p className='text-2xl'>{item.title}</p>

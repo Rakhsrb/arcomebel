@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 export const Sofa = () => {
     const data = useSelector(state => state.common.sofa)
     return (
-        <section>
+        <section className='py-20'>
             <div className="container">
                 <h1 className='text-3xl my-3'>Диваны</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
@@ -13,7 +13,7 @@ export const Sofa = () => {
                         data?.map((item, index) => (
                             <div className="flex flex-col justify-between " key={index}>
                                 <img src={item.image} className='w-full' alt={item.title} />
-                                <div className='p-3 flex flex-col gap-5 justify-between h-full'>
+                                <div className='card p-3 flex flex-col gap-5 justify-between h-full'>
                                     <p className='text-2xl'>{item.title}</p>
                                     <h3 ><del className='text-slate-400 text text-2xl' >{item.price}</del> <span className='text-3xl'>{Math.round(item.price - (item.price / 100 * 25))}</span></h3>
                                     <div className='flex b items-center justify-between'>
