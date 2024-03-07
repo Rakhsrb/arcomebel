@@ -8,55 +8,60 @@ import {
 } from "@phosphor-icons/react";
 import { Heart } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const Header = () => {
   const Nav_link = [
     {
-      to: "",
+      to: "/kitchen",
       title: "Кухни",
     },
     {
-      to: "",
+      to: "/guestroom",
       title: "Гостинные",
     },
     {
-      to: "",
+      to: "/bedroom",
       title: "Спальни",
     },
     {
-      to: "",
+      to: "/hool",
       title: "Прихожие",
     },
     {
-      to: "",
+      to: "/coupe",
       title: "Шкафы-купе",
     },
     {
-      to: "",
+      to: "/babyroom",
       title: "Детские",
     },
     {
-      to: "",
+      to: "sofa",
       title: "Диваны",
     },
   ];
   return (
     <>
-      <header className="orta:h-[80px] h-[60px] px-2">
+      <header className="sticky left-0 top-0 bg-white z-50 orta:h-[80px] h-[60px] px-2">
         <div className="container h-full flex items-center justify-between">
-          <Link>
-            <img className="logo w-[130px]" src="./image/logo.png" alt="" />
+          <div className="flex items-center gap-5">
+            <Link>
+              <img className="logo w-[130px]" src="./image/logo.png" alt="" />
+            </Link>
+            <div className="flex items-center gap-2">
+              <PhoneCall />
+              <a href="tel: +998950941467">95 094-14-67</a>
+            </div>
+          </div>
+          <Link className="orta:hidden flex flex-col items-center">
+            <MagnifyingGlass size={25} />
           </Link>
-          <div className="orta:flex hidden items-center justify-between border-2 py-2 px-2 rounded-md border-green-700">
-            <input type="text" placeholder="Поиск" className="outline-none" />
-            <MagnifyingGlass />
-          </div>
-          <div className="flex items-center gap-2">
-            <PhoneCall />
-            <a href="tel: +998950941467">+998 (95) 094-14-67</a>
-          </div>
           <div className="orta:flex hidden gap-5">
+            <Link className="flex flex-col items-center">
+              <MagnifyingGlass size={25} />
+              <span>Поиск</span>
+            </Link>
             <div className="flex flex-col items-center">
               <User size={25} />
               <span>Войти</span>
@@ -78,7 +83,7 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <div className="orta:hidden block  fixed right-0 bottom-0 w-full h-[60px] border-t py-2">
+      <div className="orta:hidden block z-50 bg-white fixed right-0 bottom-0 w-full h-[60px] border-t py-2">
         <div className="flex h-full items-center justify-evenly">
           <Link className="flex flex-col items-center">
             <House size={25} />
@@ -113,12 +118,12 @@ export const Header = () => {
           <ul className="flex justify-evenly py-2">
             {Nav_link.map((item, index) => (
               <li key={index}>
-                <Link
+                <NavLink
                   className="hover:bg-blue-950 hover:text-white p-2"
                   to={item.to}
                 >
                   {item.title}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
