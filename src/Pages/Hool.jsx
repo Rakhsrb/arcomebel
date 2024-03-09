@@ -17,7 +17,7 @@ export const Hool = () => {
                 <p className='text-2xl'>{item.title}</p>
                 <h3 ><del className='text-slate-400 text text-2xl' >{item.price}</del> <span className='text-3xl'>{Math.round(item.price - (item.price / 100 * 25))}</span></h3>
                 <div className='flex b items-center justify-between'>
-                  <button className='border-2 border-blue-950 px-4 py-2 rounded-md'>КУПИТЬ</button>
+                  <button className='border-2 border-blue-950 px-4 py-2 rounded-md hover:bg-blue-950 hover:text-white'>КУПИТЬ</button>
                   <button>{item.liked ? <Star className='text-3xl' /> : <Heart className='text-3xl' />}</button>
                 </div>
               </div>
