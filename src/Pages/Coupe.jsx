@@ -2,7 +2,8 @@ import { Heart, Star } from '@phosphor-icons/react'
 import { useSelector } from 'react-redux'
 
 export const Coupe = () => {
-    const data = useSelector(state => state.common.coupe)
+  const api = useSelector(state => state.common.data)
+  const data = api.filter(item => item.type == 'coupe')
   return (
     <section className='py-20'>
     <div className="container">

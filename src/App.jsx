@@ -8,6 +8,7 @@ import { Hool } from "./Pages/Hool";
 import { Coupe } from "./Pages/Coupe";
 import { Babyroom } from "./Pages/Babyroom";
 import { Sofa } from "./Pages/Sofa";
+import { Detail } from "./Pages/Detail";
 
 function App() {
   const router = createBrowserRouter([
@@ -47,6 +48,10 @@ function App() {
         {
           path: "sofa",
           element: <Sofa />
+        },
+        {
+          path: ':id',
+          element: <Detail />
         }
       ],
     },

@@ -3,7 +3,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 export const Hool = () => {
-    const data = useSelector(state => state.common.hool)
+  const api = useSelector(state => state.common.data)
+  const data = api.filter(item => item.type == 'hool')
   return (
     <section className='py-20'>
     <div className="container">

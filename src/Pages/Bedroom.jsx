@@ -3,7 +3,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 export const Bedroom = () => {
-    const data = useSelector(state => state.common.bedroom)
+    const api = useSelector(state => state.common.data)
+    const data = api.filter(item => item.type == 'bedroom')
     return (
         <>
             <section className='py-20'>
