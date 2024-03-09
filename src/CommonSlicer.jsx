@@ -6,6 +6,8 @@ const CommonReducer = createSlice({
     data: [
       {
         id: 0,
+        amount: 3,
+        count: 1,
         liked: false,
         bought: false,
         type: 'kitchen',
@@ -18,6 +20,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 1,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'kitchen',
@@ -30,6 +34,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 2,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'kitchen',
@@ -42,6 +48,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 3,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'kitchen',
@@ -55,6 +63,8 @@ const CommonReducer = createSlice({
       ,
       {
         id: 4,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'guestroom',
@@ -67,6 +77,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 5,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'guestroom',
@@ -79,6 +91,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 6,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'guestroom',
@@ -91,6 +105,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 7,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'guestroom',
@@ -104,6 +120,8 @@ const CommonReducer = createSlice({
       ,
       {
         id: 8,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'bedroom',
@@ -116,6 +134,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 9,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'bedroom',
@@ -128,6 +148,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 10,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'bedroom',
@@ -140,6 +162,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 11,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'bedroom',
@@ -153,6 +177,8 @@ const CommonReducer = createSlice({
       ,
       {
         id: 12,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'hool',
@@ -165,6 +191,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 13,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'hool',
@@ -177,6 +205,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 14,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'hool',
@@ -189,6 +219,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 15,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'hool',
@@ -201,6 +233,8 @@ const CommonReducer = createSlice({
       }
       , {
         id: 16,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'coupe',
@@ -213,6 +247,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 17,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'coupe',
@@ -225,6 +261,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 18,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'coupe',
@@ -237,6 +275,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 19,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'coupe',
@@ -249,6 +289,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 20,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'babyroom',
@@ -261,6 +303,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 21,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'babyroom',
@@ -273,6 +317,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 22,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'babyroom',
@@ -285,6 +331,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 23,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'babyroom',
@@ -298,6 +346,8 @@ const CommonReducer = createSlice({
       ,
       {
         id: 24,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'sofa',
@@ -310,6 +360,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 25,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'sofa',
@@ -322,6 +374,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 26,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'sofa',
@@ -334,6 +388,8 @@ const CommonReducer = createSlice({
       },
       {
         id: 27,
+        amount: 5,
+        count: 1,
         liked: false,
         bought: false,
         type: 'sofa',
