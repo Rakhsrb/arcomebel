@@ -26,7 +26,7 @@ export const Kitchen = () => {
                           : <h2 className='text-red-500'>Нет в наличии</h2>
                       }
                     </div>
-                    <div className='flex b items-center justify-between'>
+                    <div className='flex items-center justify-between'>
                       <Link to={`/${item.id}`} className='border-2 border-blue-950 px-4 py-2 rounded-md hover:bg-blue-950 hover:text-white'>КУПИТЬ</Link>
                       <button>{item.liked ? <Star className='text-3xl' /> : <Heart className='text-3xl text-rose-400' />}</button>
                     </div>

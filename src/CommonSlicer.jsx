@@ -406,8 +406,30 @@ const CommonReducer = createSlice({
   },
   reducers: {
     productIncrement() { },
+    addToCart(state, action) {
+      const existingItem = state.cart.find(item => item.id === action.payload.id);
+      if (!existingItem) {
+        state.cart.push({ ...action.payload, bought: true });
+        state.data = state.data.map(item =>
+          item.id == action.payload.id
+            ? { ...action.payload, bought: true }
+            : item)
+      }
+    },
+    increment(state, action) {
+      state.data = state.data.map((item) => item.id === action.payload.id
+        ? { ...action.payload, count: action.payload.count + 1 }
+        : item
+      )
+    },
+    decrement(state, action) {
+      state.data = state.data.map((item) => item.id === action.payload.id
+        ? { ...action.payload, count: action.payload.count - 1 }
+        : item
+      )
+    }
   },
 });
 
-export const { productIncrement } = CommonReducer.actions;
+export const { addToCart, increment, decrement } = CommonReducer.actions;
 export default CommonReducer.reducer;
