@@ -27,34 +27,42 @@ export const Home = () => {
   ]
   const catalog = [
     {
+      to: '/kitchen',
       image: './image/kitchen.png',
       title: 'КУХНИ'
     },
     {
+      to: '/guestroom',
       image: './image/guestroom.png',
       title: 'ГОСТИННЫЕ'
     },
     {
+      to: '/bedroom',
       image: './image/bedroom.png',
       title: 'СПАЛЬНИ'
     },
     {
+      to: '/hool',
       image: './image/coomingroom.png',
       title: 'ПРИХОЖИЕ'
     },
     {
+      to: '/coupe',
       image: './image/coupe.png',
       title: 'ШКАФЫ-КУПЕ'
     },
     {
+      to: '/babyroom',
       image: './image/babyroom.png',
       title: 'ДЕТСКИЕ'
     },
     {
+      to: '/sofa',
       image: './image/sofa.png',
       title: 'ДИВАНЫ'
     },
     {
+      to: '/chair',
       image: './image/chair.png',
       title: 'СТОЛЫ И СТУЛЬЯ'
     },
@@ -135,7 +143,7 @@ export const Home = () => {
           <div className="grid gap-2 grid-cols-2 xl:grid-cols-4">
             {
               catalog.map((item, index) => (
-                <Link key={index} className="relative overflow-hidden rounded-md">
+                <Link to={item.to} key={index} className="relative overflow-hidden rounded-md">
                   <img className='w-full hover:scale-110' style={{ transition: 'all .3s ease' }} src={item.image} alt={item.title} />
                   <span className='absolute left-0 bottom-0 bg-blue-950 rounded-md text-white p-2 text-[13px]'>{item.title}</span>
                 </Link>
