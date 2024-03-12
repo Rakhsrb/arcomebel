@@ -109,15 +109,24 @@ export const Home = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper h-full bg-green-500">
-            <SwiperSlide className='flex items-center justify-center'>
-              <span className='text-5xl text-white font-bold'>1</span>
+            className="mySwiper h-full overflow-hidden">
+            <SwiperSlide className='w-full' style={{
+              background: "url('./image/bgrasm1.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}>
             </SwiperSlide>
-            <SwiperSlide className='flex items-center justify-center'>
-              <span className='text-5xl text-white font-bold'>2</span>
+            <SwiperSlide className='w-full' style={{
+              background: "url('./image/bgrasm2.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}>
             </SwiperSlide>
-            <SwiperSlide className='flex items-center justify-center'>
-              <span className='text-5xl text-white font-bold'>3</span>
+            <SwiperSlide className='w-full' style={{
+              background: "url('./image/bgrasm3.jpeg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}>
             </SwiperSlide>
           </Swiper>
         </div>
