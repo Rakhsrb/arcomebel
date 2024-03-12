@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import { cartdecrement, cartincrement, removeFromCart } from '../CommonSlicer';
@@ -7,6 +7,7 @@ import { Trash } from '@phosphor-icons/react';
 export const Cart = () => {
     const data = useSelector(state => state.common.cart)
     const dispatch = useDispatch()
+    const subtotal = data.reduce((acc, item) => acc + (item.price * item.count), 0);
     return (
         <section className='bg-slate-200 min-h-screen px-2 py-14'>
             <div className="container">
@@ -42,8 +43,8 @@ export const Cart = () => {
                             ))
                     }
                 </div>
-                <div className="flex flex-col ">
-                    <h3>Обшая сумма: {data.length > 1 ? "" : "0$"}</h3>
+                <div className="flex flex-col">
+                    <h3>Обшая сумма: {data.length > 0 ? `${subtotal}$` : "0$"}</h3>
                 </div>
             </div>
         </section>
