@@ -21,7 +21,7 @@ export const Detail = () => {
                         <div className="p-5 flex flex-col gap-5">
                             <h1 className='text-2xl md:text-3xl'>{item.title}</h1>
                             <h3 className='text-2xl flex gap-4'>
-                                <del className='text-red-500'>{item.price}$</del>
+                                <del className='text-red-500'>{item.totalPrice}$</del>
                                 <span className='text-green-500'>
                                     {Math.round(item.price - (item.price / 100 * 25))}$
                                 </span>

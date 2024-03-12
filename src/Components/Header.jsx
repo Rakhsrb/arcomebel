@@ -8,6 +8,7 @@ import {
 } from "@phosphor-icons/react";
 import { Heart } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 
 export const Header = () => {
@@ -39,14 +40,16 @@ export const Header = () => {
     {
       to: "sofa",
       title: "Диваны",
-    },
+    }
   ];
+  const basketCount = useSelector(state => state.common.cart)
+
   return (
     <>
       <header className="sticky left-0 top-0 bg-white z-50 orta:h-[80px] h-[60px] px-2">
         <div className="container h-full flex items-center justify-between">
           <div className="flex items-center gap-5">
-            <Link>
+            <Link to={'/'}>
               <img className="logo w-[130px]" src="./image/logo.png" alt="" />
             </Link>
             <div className="flex items-center gap-2">
@@ -73,19 +76,19 @@ export const Header = () => {
               <Heart size={25} />
               <span>Избранное</span>
             </div>
-            <div className="flex flex-col items-center relative">
-              <span className="absolute right-[-5px] top-[-5px] bg-green-500 text-white flex items-center justify-center px-2 rounded-md">
-                0
-              </span>
+            <Link to="/cart" className="flex flex-col items-center relative">
+              {basketCount.length > 0 ? <span className="absolute right-[-5px] top-[-5px] bg-green-500 text-white flex items-center justify-center px-2 rounded-md">
+                {basketCount.length}
+              </span> : ''}
               <ShoppingCart size={25} />
               <span>Корзина</span>
-            </div>
+            </Link>
           </div>
         </div>
       </header>
       <div className="orta:hidden block z-50 bg-white fixed right-0 bottom-0 w-full h-[60px] border-t py-2">
         <div className="flex h-full items-center justify-evenly">
-          <Link className="flex flex-col items-center">
+          <Link to={'/'} className="flex flex-col items-center">
             <House size={25} />
             <span>Главный</span>
           </Link>
@@ -100,7 +103,7 @@ export const Header = () => {
             <Heart size={25} />
             <span>Избранное</span>
           </Link>
-          <Link className="flex flex-col items-center relative">
+          <Link to={'/cart'} className="flex flex-col items-center relative">
             <span className="absolute right-0 top-0 text-[12px] bg-green-500 text-white flex items-center justify-center px-1 rounded-md">
               0
             </span>

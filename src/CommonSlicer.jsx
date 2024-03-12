@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const CommonReducer = createSlice({
   name: "common",
   initialState: {
-    data: [
+    data: JSON.parse(localStorage.getItem('data')) || [
       {
         id: 0,
         amount: 3,
@@ -401,11 +401,10 @@ const CommonReducer = createSlice({
         ]
       }
     ],
-    likes: [],
-    cart: [],
+    likes: JSON.parse(localStorage.getItem('likes')) || [],
+    cart: JSON.parse(localStorage.getItem('cart')) || [],
   },
   reducers: {
-    productIncrement() { },
     addToCart(state, action) {
       const existingItem = state.cart.find(item => item.id === action.payload.id);
       if (!existingItem) {
@@ -414,6 +413,8 @@ const CommonReducer = createSlice({
           item.id == action.payload.id
             ? { ...action.payload, bought: true }
             : item)
+        localStorage.setItem('data', JSON.stringify(state.data))
+        localStorage.setItem('cart', JSON.stringify(state.cart))
       }
     },
     increment(state, action) {
@@ -429,9 +430,27 @@ const CommonReducer = createSlice({
           ? { ...action.payload, count: action.payload.count - 1 }
           : item
       )
+    },
+    cartincrement(state, action) {
+      state.cart = state.cart.map((item) =>
+        item.id === action.payload.id && action.payload.count < action.payload.amount
+          ? { ...action.payload, count: action.payload.count + 1 }
+          : item
+      )
+    },
+    cartdecrement(state, action) {
+      state.cart = state.cart.map((item) =>
+        item.id === action.payload.id && action.payload.count > 1
+          ? { ...action.payload, count: action.payload.count - 1 }
+          : item
+      )
+    },
+    removeFromCart(state, action) {
+      state.cart = state.cart.filter(item => item.id !== action.payload.id)
+      localStorage.setItem('cart', JSON.stringify(state.cart))
     }
   },
 });
 
-export const { addToCart, increment, decrement } = CommonReducer.actions;
+export const { addToCart, increment, decrement, cartdecrement, cartincrement, removeFromCart } = CommonReducer.actions;
 export default CommonReducer.reducer;
