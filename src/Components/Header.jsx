@@ -104,9 +104,9 @@ export const Header = () => {
             <span>Избранное</span>
           </Link>
           <Link to={'/cart'} className="flex flex-col items-center relative">
-            <span className="absolute right-0 top-0 text-[12px] bg-green-500 text-white flex items-center justify-center px-1 rounded-md">
-              0
-            </span>
+            {basketCount.length > 0 ? <span className="absolute right-[-5px] top-[-5px] bg-green-500 text-white flex items-center justify-center px-2 rounded-md">
+              {basketCount.length}
+            </span> : ''}
             <ShoppingCart size={25} />
             <span>Корзина</span>
           </Link>
