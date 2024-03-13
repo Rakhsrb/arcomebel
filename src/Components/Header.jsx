@@ -56,11 +56,11 @@ export const Header = () => {
               <a href="tel: +998950941467">95 094-14-67</a>
             </div>
           </div>
-          <Link className="orta:hidden flex flex-col items-center">
+          <Link to={'/search'} className="orta:hidden flex flex-col items-center">
             <MagnifyingGlass size={25} />
           </Link>
           <div className="orta:flex hidden gap-5">
-            <Link className="flex flex-col items-center">
+            <Link to={'/search'} className="flex flex-col items-center">
               <MagnifyingGlass size={25} />
               <span>Поиск</span>
             </Link>

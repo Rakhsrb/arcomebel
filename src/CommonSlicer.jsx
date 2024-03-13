@@ -11,7 +11,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'kitchen',
-        title: "Мори кровать КРМ 900.1",
+        title: "мори кровать крм 900.1",
         image: "./image/kitchen1.png",
         price: 5017,
         size: [
@@ -25,7 +25,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'kitchen',
-        title: "Гостиная модульная Lucido",
+        title: "гостиная модульная lucido",
         image: "./image/kitchen2.png",
         price: 5017,
         size: [
@@ -39,7 +39,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'kitchen',
-        title: "Ронда КРР1600.1",
+        title: "ронда крр1600.1",
         image: "./image/kitchen3.png",
         price: 5017,
         size: [
@@ -53,7 +53,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'kitchen',
-        title: "Гранд шкаф верхний ",
+        title: "гранд шкаф верхний ",
         image: "./image/kitchen4.png",
         price: 5017,
         size: [
@@ -68,7 +68,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'guestroom',
-        title: "Мори кровать КРМ 900.1",
+        title: "мори кровать крм 900.1",
         image: "./image/kitchen1.png",
         price: 5017,
         size: [
@@ -82,7 +82,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'guestroom',
-        title: "Гостиная модульная Lucido",
+        title: "гостиная модульная lucido",
         image: "./image/kitchen2.png",
         price: 5017,
         size: [
@@ -96,7 +96,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'guestroom',
-        title: "Ронда КРР1600.1",
+        title: "ронда крр1600.1",
         image: "./image/kitchen3.png",
         price: 5017,
         size: [
@@ -110,7 +110,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'guestroom',
-        title: "Гранд шкаф верхний ",
+        title: "гранд шкаф верхний ",
         image: "./image/kitchen4.png",
         price: 5017,
         size: [
@@ -125,7 +125,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'bedroom',
-        title: "Мори кровать КРМ 900.1",
+        title: "мори кровать крм 900.1",
         image: "./image/kitchen1.png",
         price: 5017,
         size: [
@@ -139,7 +139,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'bedroom',
-        title: "Гостиная модульная Lucido",
+        title: "гостиная модульная lucido",
         image: "./image/kitchen2.png",
         price: 5017,
         size: [
@@ -153,7 +153,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'bedroom',
-        title: "Ронда КРР1600.1",
+        title: "ронда крр1600.1",
         image: "./image/kitchen3.png",
         price: 5017,
         size: [
@@ -167,7 +167,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'bedroom',
-        title: "Гранд шкаф верхний ",
+        title: "гранд шкаф верхний ",
         image: "./image/kitchen4.png",
         price: 5017,
         size: [
@@ -182,7 +182,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'hool',
-        title: "Мори кровать КРМ 900.1",
+        title: "мори кровать крм 900.1",
         image: "./image/kitchen1.png",
         price: 5017,
         size: [
@@ -196,7 +196,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'hool',
-        title: "Гостиная модульная Lucido",
+        title: "гостиная модульная lucido",
         image: "./image/kitchen2.png",
         price: 5017,
         size: [
@@ -210,7 +210,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'hool',
-        title: "Ронда КРР1600.1",
+        title: "ронда крр1600.1",
         image: "./image/kitchen3.png",
         price: 5017,
         size: [
@@ -224,7 +224,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'hool',
-        title: "Гранд шкаф верхний ",
+        title: "гранд шкаф верхний ",
         image: "./image/kitchen4.png",
         price: 5017,
         size: [
@@ -238,7 +238,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'coupe',
-        title: "Мори кровать КРМ 900.1",
+        title: "мори кровать крм 900.1",
         image: "./image/kitchen1.png",
         price: 5017,
         size: [
@@ -252,7 +252,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'coupe',
-        title: "Гостиная модульная Lucido",
+        title: "гостиная модульная lucido",
         image: "./image/kitchen2.png",
         price: 5017,
         size: [
@@ -266,7 +266,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'coupe',
-        title: "Ронда КРР1600.1",
+        title: "ронда крр1600.1",
         image: "./image/kitchen3.png",
         price: 5017,
         size: [
@@ -280,7 +280,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'coupe',
-        title: "Гранд шкаф верхний ",
+        title: "гранд шкаф верхний ",
         image: "./image/kitchen4.png",
         price: 5017,
         size: [
@@ -294,7 +294,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'babyroom',
-        title: "Мори кровать КРМ 900.1",
+        title: "мори кровать крм 900.1",
         image: "./image/kitchen1.png",
         price: 5017,
         size: [
@@ -308,7 +308,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'babyroom',
-        title: "Гостиная модульная Lucido",
+        title: "гостиная модульная lucido",
         image: "./image/kitchen2.png",
         price: 5017,
         size: [
@@ -322,7 +322,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'babyroom',
-        title: "Ронда КРР1600.1",
+        title: "ронда крр1600.1",
         image: "./image/kitchen3.png",
         price: 5017,
         size: [
@@ -336,7 +336,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'babyroom',
-        title: "Гранд шкаф верхний ",
+        title: "гранд шкаф верхний ",
         image: "./image/kitchen4.png",
         price: 5017,
         size: [
@@ -351,7 +351,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'sofa',
-        title: "Мори кровать КРМ 900.1",
+        title: "мори кровать крм 900.1",
         image: "./image/kitchen1.png",
         price: 5017,
         size: [
@@ -365,7 +365,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'sofa',
-        title: "Гостиная модульная Lucido",
+        title: "гостиная модульная lucido",
         image: "./image/kitchen2.png",
         price: 5017,
         size: [
@@ -379,7 +379,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'sofa',
-        title: "Ронда КРР1600.1",
+        title: "ронда крр1600.1",
         image: "./image/kitchen3.png",
         price: 5017,
         size: [
@@ -393,7 +393,7 @@ const CommonReducer = createSlice({
         liked: false,
         bought: false,
         type: 'sofa',
-        title: "Гранд шкаф верхний ",
+        title: "гранд шкаф верхний ",
         image: "./image/kitchen4.png",
         price: 5017,
         size: [

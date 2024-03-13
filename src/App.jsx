@@ -10,6 +10,7 @@ import { Babyroom } from "./Pages/Babyroom";
 import { Sofa } from "./Pages/Sofa";
 import { Detail } from "./Pages/Detail";
 import { Cart } from "./Pages/Cart";
+import { Search } from "./Pages/Search";
 
 function App() {
   const router = createBrowserRouter([
@@ -57,6 +58,10 @@ function App() {
         {
           path: ':id',
           element: <Detail />
+        },
+        {
+          path: 'search',
+          element: <Search />
         }
       ],
     },
