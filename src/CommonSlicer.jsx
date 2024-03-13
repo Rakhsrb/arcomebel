@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+function setLocal(qayer, nima) {
+  localStorage.setItem(qayer, JSON.stringify(nima))
+}
+
 const CommonReducer = createSlice({
   name: "common",
   initialState: {
@@ -413,8 +417,8 @@ const CommonReducer = createSlice({
           item.id == action.payload.id
             ? { ...action.payload, bought: true }
             : item)
-        localStorage.setItem('data', JSON.stringify(state.data))
-        localStorage.setItem('cart', JSON.stringify(state.cart))
+        setLocal('data', state.data)
+        setLocal('cart', state.cart)
       }
     },
     increment(state, action) {
@@ -450,8 +454,8 @@ const CommonReducer = createSlice({
       state.data = state.data.map(item => item.id == action.payload.id ?
         { ...item, bought: false } : item
       )
-      localStorage.setItem('data', JSON.stringify(state.data))
-      localStorage.setItem('cart', JSON.stringify(state.cart))
+      setLocal('data', state.data)
+      setLocal('cart', state.cart)
     }
   },
 });

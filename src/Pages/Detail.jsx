@@ -28,6 +28,7 @@ export const Detail = () => {
                             </h3>
                             <div className='flex flex-col gap-5'>
                                 <div>
+                                    <h1 className='text-blue-600'>В наличии ({item.amount})</h1>
                                     <div className='flex items-center gap-5'>
                                         <h3 className='text-2xl'>Размер:</h3>
                                         {item.size.map((item, index) => {
