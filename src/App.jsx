@@ -11,6 +11,7 @@ import { Sofa } from "./Pages/Sofa";
 import { Detail } from "./Pages/Detail";
 import { Cart } from "./Pages/Cart";
 import { Search } from "./Pages/Search";
+import { User } from "./Pages/User";
 
 function App() {
   const router = createBrowserRouter([
@@ -62,6 +63,10 @@ function App() {
         {
           path: 'search',
           element: <Search />
+        },
+        {
+          path: 'user',
+          element: <User />
         }
       ],
     },

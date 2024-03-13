@@ -447,6 +447,10 @@ const CommonReducer = createSlice({
     },
     removeFromCart(state, action) {
       state.cart = state.cart.filter(item => item.id !== action.payload.id)
+      state.data = state.data.map(item => item.id == action.payload.id ?
+        { ...item, bought: false } : item
+      )
+      localStorage.setItem('data', JSON.stringify(state.data))
       localStorage.setItem('cart', JSON.stringify(state.cart))
     }
   },

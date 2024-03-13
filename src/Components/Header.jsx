@@ -64,19 +64,19 @@ export const Header = () => {
               <MagnifyingGlass size={25} />
               <span>Поиск</span>
             </Link>
-            <div className="flex flex-col items-center">
+            <Link to={'/user'} className="flex flex-col items-center">
               <User size={25} />
               <span>Войти</span>
-            </div>
+            </Link>
             <div className="flex flex-col items-center relative">
-              <span className="absolute right-[-5px] top-[-5px] bg-red-500 text-white flex items-center justify-center px-2 rounded-md">
+              <span className="absolute right-[-5px] top-[-5px] bg-red-500 text-white flex items-center justify-center px-2 rounded-full border-2 border-white">
                 0
               </span>
               <Heart size={25} />
               <span>Избранное</span>
             </div>
             <Link to="/cart" className="flex flex-col items-center relative">
-              {basketCount.length > 0 ? <span className="absolute right-[-5px] top-[-5px] bg-green-500 text-white flex items-center justify-center px-2 rounded-md">
+              {basketCount.length > 0 ? <span className="absolute right-[-5px] top-[-5px] bg-green-500 text-white flex items-center justify-center px-2 rounded-full border-2 border-white">
                 {basketCount.length}
               </span> : ''}
               <ShoppingCart size={25} />
@@ -92,20 +92,20 @@ export const Header = () => {
             <span>Главный</span>
           </Link>
           <Link className="flex flex-col items-center relative">
-            <span className="absolute w-[20px] h-[20px] right-0 top-0 text-[12px] bg-red-500 text-white flex items-center justify-center px-1 rounded-md">
+            <span className="absolute w-[20px] h-[20px] right-0 top-0 text-[12px] bg-red-500 text-white flex items-center justify-center px-1 rounded-full border-2 border-white">
               0
             </span>
             <Heart size={25} />
             <span>Избранное</span>
           </Link>
           <Link to={'/cart'} className="flex flex-col items-center relative">
-            {basketCount.length > 0 ? <span className="absolute w-[20px] h-[20px] right-0 top-0 bg-green-500 text-white flex items-center justify-center px-2 rounded-md">
+            {basketCount.length > 0 ? <span className="absolute w-[20px] h-[20px] right-0 top-0 bg-green-500 text-white flex items-center justify-center px-2 rounded-full border-2 border-white">
               {basketCount.length}
             </span> : ''}
             <ShoppingCart size={25} />
             <span>Корзина</span>
           </Link>
-          <Link className="flex flex-col items-center">
+          <Link to={'/user'} className="flex flex-col items-center">
             <User size={25} />
             <span>Войти</span>
           </Link>
