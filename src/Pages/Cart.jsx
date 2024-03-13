@@ -9,7 +9,7 @@ export const Cart = () => {
     const dispatch = useDispatch()
     const subtotal = data.reduce((acc, item) => acc + (item.price * item.count), 0);
     return (
-        <section className='bg-slate-200 min-h-screen px-2 py-14'>
+        <section className='bg-slate-100 min-h-screen px-2 py-14'>
             <div className="container">
                 <h1 className='text-3xl mb-5 '>Корзина</h1>
             </div>
@@ -21,13 +21,13 @@ export const Cart = () => {
                             <Link to={'/'}>Go To Shop</Link>
                         </div> :
                             data.map((item, index) => (
-                                <div key={index} className="flex flex-col md:flex-row bg-white md:p-5 relative">
-                                    <div onClick={() => dispatch(removeFromCart(item))} className="flex bg-red-400 text-white absolute right-0 px-4 py-1 top-0 cursor-pointer">
+                                <div key={index} className="flex flex-col md:flex-row bg-slate-50 rounded-md md:p-5 relative">
+                                    <div onClick={() => dispatch(removeFromCart(item))} className="items-center text-sm flex md:bg-transparent bg-red-400 md:text-black text-white absolute right-0 px-2 py-1 top-0 cursor-pointer rounded-md">
                                         Удалить
-                                        <Trash size={25} />
+                                        <Trash size={15} />
                                     </div>
                                     <figure className='w-full md:w-auto'>
-                                        <img className='w-full md:w-auto' src={item.image} alt={item.title} />
+                                        <img className='w-full md:w-auto rounded-md' src={item.image} alt={item.title} />
                                     </figure>
                                     <div className="flex flex-col justify-between gap-3 md:gap-0 p-3">
                                         <h3>{item.title}</h3>
