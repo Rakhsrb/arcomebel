@@ -3,7 +3,6 @@ import {
   MagnifyingGlass,
   PhoneCall,
   ShoppingCart,
-  Suitcase,
   User,
 } from "@phosphor-icons/react";
 import { Heart } from "@phosphor-icons/react/dist/ssr";
@@ -92,19 +91,15 @@ export const Header = () => {
             <House size={25} />
             <span>Главный</span>
           </Link>
-          <Link className="flex flex-col items-center">
-            <Suitcase size={25} />
-            <span>Каталог</span>
-          </Link>
           <Link className="flex flex-col items-center relative">
-            <span className="absolute right-0 top-0 text-[12px] bg-red-500 text-white flex items-center justify-center px-1 rounded-md">
+            <span className="absolute w-[20px] h-[20px] right-0 top-0 text-[12px] bg-red-500 text-white flex items-center justify-center px-1 rounded-md">
               0
             </span>
             <Heart size={25} />
             <span>Избранное</span>
           </Link>
           <Link to={'/cart'} className="flex flex-col items-center relative">
-            {basketCount.length > 0 ? <span className="absolute right-[-5px] top-[-5px] bg-green-500 text-white flex items-center justify-center px-2 rounded-md">
+            {basketCount.length > 0 ? <span className="absolute w-[20px] h-[20px] right-0 top-0 bg-green-500 text-white flex items-center justify-center px-2 rounded-md">
               {basketCount.length}
             </span> : ''}
             <ShoppingCart size={25} />
