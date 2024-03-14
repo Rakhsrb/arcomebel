@@ -457,27 +457,38 @@ const CommonReducer = createSlice({
       setLocal('data', state.data)
       setLocal('cart', state.cart)
     },
-    likeng(state, action) {
+    setLike(state, action) {
       const existingItem = state.likes.find((item) => item.id === action.payload.id)
-      if (existingItem) {
-        state.likes = state.likes.map((item) => item.id == action.payload.id
-          ? { ...item, liked: false }
-          : item
-        )
-        state.likes.filter(item => item.id !== action.payload.id)
-        setLocal('data', state.data)
-      } else {
+      if (!existingItem) {
         state.data = state.data.map((item) => item.id == action.payload.id
           ? { ...item, liked: true }
           : item
         )
         state.likes.push(action.payload)
+        setLocal('likes', state.likes)
         setLocal('data', state.data)
       }
+    },
+    removeLike(state, action) {
+      state.data = state.data.map((item) => item.id == action.payload.id
+        ? { ...item, liked: false }
+        : item
+      )
+      state.likes = state.likes.filter((item) => item.id !== action.payload.id)
+      setLocal('likes', state.likes)
+      setLocal('data', state.data)
     }
-
   },
 });
 
-export const { addToCart, increment, decrement, cartdecrement, cartincrement, removeFromCart, likeng } = CommonReducer.actions;
+export const {
+  addToCart,
+  increment,
+  decrement,
+  cartdecrement,
+  cartincrement,
+  removeFromCart,
+  setLike,
+  removeLike
+} = CommonReducer.actions;
 export default CommonReducer.reducer;

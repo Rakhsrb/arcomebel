@@ -40,9 +40,10 @@ export const Header = () => {
       to: "sofa",
       title: "Диваны",
     },
-    
+
   ];
   const basketCount = useSelector(state => state.common.cart)
+  const likeCount = useSelector(state => state.common.likes)
 
   return (
     <>
@@ -69,13 +70,13 @@ export const Header = () => {
               <User size={25} />
               <span>Войти</span>
             </Link>
-            <div className="flex flex-col items-center relative">
-              <span className="absolute right-[-5px] top-[-5px] bg-red-500 text-white flex items-center justify-center px-2 rounded-full border-2 border-white">
-                0
-              </span>
+            <Link to={'/saved'} className="flex flex-col items-center relative">
+              {likeCount.length > 0 ? <span className="absolute right-[-5px] top-[-5px] bg-red-500 text-white flex items-center justify-center px-2 rounded-full border-2 border-white">
+                {likeCount.length}
+              </span> : ''}
               <Heart size={25} />
-              <Link to="/saved" >Избранное</Link>
-            </div>
+              <span>Избранное</span>
+            </Link>
             <Link to="/cart" className="flex flex-col items-center relative">
               {basketCount.length > 0 ? <span className="absolute right-[-5px] top-[-5px] bg-green-500 text-white flex items-center justify-center px-2 rounded-full border-2 border-white">
                 {basketCount.length}
