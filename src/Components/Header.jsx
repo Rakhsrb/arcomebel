@@ -39,7 +39,8 @@ export const Header = () => {
     {
       to: "sofa",
       title: "Диваны",
-    }
+    },
+    
   ];
   const basketCount = useSelector(state => state.common.cart)
 
@@ -73,7 +74,7 @@ export const Header = () => {
                 0
               </span>
               <Heart size={25} />
-              <span>Избранное</span>
+              <Link to="/saved" >Избранное</Link>
             </div>
             <Link to="/cart" className="flex flex-col items-center relative">
               {basketCount.length > 0 ? <span className="absolute right-[-5px] top-[-5px] bg-green-500 text-white flex items-center justify-center px-2 rounded-full border-2 border-white">

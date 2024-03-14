@@ -458,13 +458,24 @@ const CommonReducer = createSlice({
       setLocal('cart', state.cart)
     },
     likeng(state, action) {
-      state.data = state.data.map((item) => item.id == action.payload.id
-        ? { ...item, liked: item.liked ? false : true }
-        : item
-      )
-      setLocal('data', state.data)
+      const existingItem = state.likes.find((item) => item.id === action.payload.id)
+      if (existingItem) {
+        state.likes = state.likes.map((item) => item.id == action.payload.id
+          ? { ...item, liked: false }
+          : item
+        )
+        state.likes.filter(item => item.id !== action.payload.id)
+        setLocal('data', state.data)
+      } else {
+        state.data = state.data.map((item) => item.id == action.payload.id
+          ? { ...item, liked: true }
+          : item
+        )
+        state.likes.push(action.payload)
+        setLocal('data', state.data)
+      }
     }
-    
+
   },
 });
 

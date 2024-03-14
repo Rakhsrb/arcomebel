@@ -12,6 +12,7 @@ import { Detail } from "./Pages/Detail";
 import { Cart } from "./Pages/Cart";
 import { Search } from "./Pages/Search";
 import { User } from "./Pages/User";
+import { Saved } from "./Pages/Saved";
 
 function App() {
   const router = createBrowserRouter([
@@ -67,6 +68,10 @@ function App() {
         {
           path: 'user',
           element: <User />
+        },
+        {
+          path: 'saved',
+          element: <Saved />
         }
       ],
     },
