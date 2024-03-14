@@ -456,9 +456,17 @@ const CommonReducer = createSlice({
       )
       setLocal('data', state.data)
       setLocal('cart', state.cart)
+    },
+    likeng(state, action) {
+      state.data = state.data.map((item) => item.id == action.payload.id
+        ? { ...item, liked: item.liked ? false : true }
+        : item
+      )
+      setLocal('data', state.data)
     }
+    
   },
 });
 
-export const { addToCart, increment, decrement, cartdecrement, cartincrement, removeFromCart } = CommonReducer.actions;
+export const { addToCart, increment, decrement, cartdecrement, cartincrement, removeFromCart, likeng } = CommonReducer.actions;
 export default CommonReducer.reducer;

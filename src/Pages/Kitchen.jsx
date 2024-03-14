@@ -1,9 +1,11 @@
 import { Heart, Star } from '@phosphor-icons/react'
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { likeng } from '../CommonSlicer'
 
 export const Kitchen = () => {
+  const dispatch = useDispatch()
   const api = useSelector(state => state.common.data)
   const data = api.filter(item => item.type == 'kitchen')
   return (
@@ -28,7 +30,7 @@ export const Kitchen = () => {
                     </div>
                     <div className='flex items-center justify-between'>
                       <Link to={`/${item.id}`} className='border-2 border-blue-950 px-4 py-2 rounded-md hover:bg-blue-950 hover:text-white'>КУПИТЬ</Link>
-                      <button>{item.liked ? <Star className='text-3xl' /> : <Heart className='text-3xl text-rose-400' />}</button>
+                      <button onClick={() => dispatch(likeng(item))} >{item.liked ? <Star className='text-3xl' /> : <Heart className='text-3xl text-rose-400' />}</button>
                     </div>
                   </div>
                 </div>

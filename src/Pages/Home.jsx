@@ -94,6 +94,7 @@ export const Home = () => {
     },
   ]
 
+
   return (
     <div className='pb-20 px-4'>
       <section className='h-[70vh] mt-[50px]'>
