@@ -422,10 +422,10 @@ const CommonReducer = createSlice({
       }
     },
     increment(state, action) {
-      state.data = state.data.map((item) =>
-        item.id === action.payload.id && action.payload.count < action.payload.amount
+      state.data = state.data.map((product) =>
+        product.id === action.payload.id && action.payload.count < action.payload.amount
           ? { ...action.payload, count: action.payload.count + 1 }
-          : item
+          : product
       )
     },
     decrement(state, action) {

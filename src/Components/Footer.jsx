@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
     return (
         <>
-            <footer className='bg-[#384685;] p-6 text-white' >
+            <footer className='bg-[#384685;] px-6 pt-6 md:pb-6 pb-24 text-white' >
                 <div className="container">
                     <div className="flex flex-col gap-5">
                         <h3><a href="tel: +998 950941467 ">+998 95 094 14 67</a></h3>

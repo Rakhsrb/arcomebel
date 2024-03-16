@@ -22,7 +22,7 @@ export const Cart = () => {
                         </div> :
                             data.map((item, index) => (
                                 <div key={index} className="flex flex-col md:flex-row bg-slate-50 rounded-md md:p-5 relative">
-                                    <div onClick={() => dispatch(removeFromCart(item))} className="items-center text-sm flex md:bg-transparent bg-red-400 md:text-black text-white absolute right-0 px-2 py-1 top-0 cursor-pointer rounded-md">
+                                    <div onClick={() => dispatch(removeFromCart(item))} className="items-center text-sm flex bg-red-400 text-white absolute right-0 px-2 py-1 top-0 cursor-pointer rounded-md">
                                         Удалить
                                         <Trash size={15} />
                                     </div>
@@ -43,8 +43,9 @@ export const Cart = () => {
                             ))
                     }
                 </div>
-                <div className="flex flex-col">
-                    <h3>Обшая сумма: {data.length > 0 ? `${subtotal}$` : "0$"}</h3>
+                <div className="flex flex-col gap-5 bg-slate-50 p-5">
+                    <h3 className='text-3xl'>Обшая сумма: {data.length > 0 ? `${subtotal}$` : "0$"}</h3>
+                    <button className='bg-red-400 text-2xl text-white rounded-md p-2'>Заказать</button>
                 </div>
             </div>
         </section>
