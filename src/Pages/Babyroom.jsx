@@ -19,7 +19,9 @@ export const Babyroom = () => {
                 <div className='p-3 flex flex-col gap-5 justify-between h-full'>
                   <p className='text-2xl'>{item.title}</p>
                   <div className="flex justify-between">
-                    <h3 className='flex gap-2 items-center'><del className='text-red-400' >{item.price}$</del> <span className='text-green-500'>{Math.round(item.price - (item.price / 100 * 25))}$</span></h3>
+                    <h3 className='flex gap-2 items-center'>
+                      <del className='text-red-400' >{item.price}$</del>
+                      <span className='text-green-500'>{Math.round(item.price - (item.price / 100 * 25))}$</span></h3>
                     {
                       item.amount > 0 ?
                         <h2 className='text-blue-500 font-bold'>В наличии ({item.amount})</h2>
