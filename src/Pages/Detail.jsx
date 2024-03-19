@@ -18,7 +18,7 @@ export const Detail = () => {
             toast.success('Товар уже в корзине!', {
                 position: 'top-right',
                 autoClose: 5000,
-                hideProgressBar: false,
+                hideProgressBar: false, 
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
@@ -68,17 +68,19 @@ export const Detail = () => {
                                     <button onClick={handleAddToCart} className={`flex gap-2 items-center text-[14px] md:text-xl ${item.bought ? 'bg-green-400' : 'bg-blue-300'} py-2 px-5 text-white rounded-md`}>{item.bought ? "Куплено" : "Купить"}<ShoppingCart /></button>
                                     <button onClick={() => {
                                         dispatch(setLike(item))
-                                        toast.success('Товар уже сохранен!', {
-                                            position: 'top-right',
-                                            autoClose: 5000,
-                                            hideProgressBar: false,
-                                            closeOnClick: true,
-                                            pauseOnHover: true,
-                                            draggable: true,
-                                            progress: undefined,
-                                            theme: 'light',
-                                            transition: Bounce,
-                                        })
+                                        if(!item.liked){
+                                            toast.success('Товар уже сохранен!', {
+                                                position: 'top-right',
+                                                autoClose: 5000,
+                                                hideProgressBar: false,
+                                                closeOnClick: true,
+                                                pauseOnHover: true,
+                                                draggable: true,
+                                                progress: undefined,
+                                                theme: 'light',
+                                                transition: Bounce,
+                                            })
+                                        }
                                     }} className='flex gap-2 items-center text-[14px] md:text-xl bg-rose-300 py-2 px-5 text-white rounded-md'>{item.liked ? "Товар уже сохранен" : "Избранное"} <Heart /></button>
                                 </div>
                             </div>
