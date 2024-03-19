@@ -1,8 +1,11 @@
 import { Heart, Star } from '@phosphor-icons/react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { setLike } from '../CommonSlicer'
+import { Bounce, toast } from 'react-toastify'
 
 export const Coupe = () => {
+  const dispatch = useDispatch()
   const api = useSelector(state => state.common.data)
   const data = api.filter(item => item.type == 'coupe')
   return (
@@ -31,12 +34,26 @@ export const Coupe = () => {
                   </div>
                   <div className='flex b items-center justify-between'>
                     <Link to={`/${item.id}`} className='border-2 border-blue-950 px-4 py-2 rounded-md hover:bg-blue-950 hover:text-white'>КУПИТЬ</Link>
-                    <button>{item.liked ? <Star className='text-3xl' /> : <Heart className='text-3xl text-rose-400' />}</button>
+                    <button onClick={() => {
+                        dispatch(setLike(item))
+                        toast.success('Товар уже сохранен!', {
+                          position: 'top-right',
+                          autoClose: 5000,
+                          hideProgressBar: false,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: 'light',
+                          transition: Bounce,
+                        })
+                      }} >{item.liked ? <Star className='text-3xl' /> : <Heart className='text-3xl text-rose-400' />}</button>
                   </div>
                 </div>
               </div>
             ))
-          }
+          } 
+
         </div>
       </div>
     </section>

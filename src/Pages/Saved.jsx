@@ -2,7 +2,7 @@ import { Heart, Star } from '@phosphor-icons/react'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { removeLike } from '../CommonSlicer'
+import { removeLike  , addToSave} from '../CommonSlicer'
 
 export const Saved = () => {
     const dispatch = useDispatch()
@@ -19,17 +19,8 @@ export const Saved = () => {
                                     <Link to={`/${item.id}`} className='w-full'><img src={item.image} className='w-full' alt={item.title} /></Link>
                                     <div className='p-3 flex flex-col gap-5 justify-between h-full'>
                                         <p className='text-2xl'>{item.title}</p>
-                                        <div className="flex justify-between">
-                                            <h3 className='flex gap-2 items-center'><del className='text-red-400' >{item.price}$</del> <span className='text-green-500'>{Math.round(item.price - (item.price / 100 * 25))}$</span></h3>
-                                            {
-                                                item.amount > 0 ?
-                                                    <h2 className='text-blue-500 font-bold'>В наличии ({item.amount})</h2>
-                                                    : <h2 className='text-red-500'>Нет в наличии</h2>
-                                            }
-                                        </div>
                                         <div className='flex items-center justify-between'>
-                                            <Link to={`/${item.id}`} className='border-2 border-blue-950 px-4 py-2 rounded-md hover:bg-blue-950 hover:text-white'>КУПИТЬ</Link>
-                                            <button onClick={() => dispatch(removeLike(item))} >{item.liked ? <Star className='text-3xl' /> : <Heart className='text-3xl text-rose-400' />}</button>
+                                        <button onClick={() => dispatch(removeLike(item))} >{item.liked ? <Star className='text-3xl' /> : <Heart className='text-3xl text-rose-400' />}</button>
                                         </div>
                                     </div>
                                 </div>

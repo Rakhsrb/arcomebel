@@ -12,7 +12,7 @@ export const Cart = () => {
 
     const handleRemoveItem = item => {
         Swal.fire({
-            title: 'Вы точно хотите удалить?',
+            title: 'Вы точно хотите удалить?'   ,
             text: 'У вас не получиться вернуть назад!',
             icon: 'warning',
             showCancelButton: true,

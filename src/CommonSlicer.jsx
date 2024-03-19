@@ -421,6 +421,18 @@ const CommonReducer = createSlice({
         setLocal('cart', state.cart)
       }
     },
+    addToSave(state, action) {
+      const existingItem = state.cart.find(item => item.id === action.payload.id);
+      if (!existingItem) {
+        state.cart.push({ ...action.payload, bought: true });
+        state.data = state.data.map(item =>
+          item.id == action.payload.id
+            ? { ...action.payload, bought: true }
+            : item)
+        setLocal('data', state.data)
+        setLocal('cart', state.cart)
+      }
+    },
     increment(state, action) {
       state.data = state.data.map((product) =>
         product.id === action.payload.id && action.payload.count < action.payload.amount
@@ -489,6 +501,7 @@ export const {
   cartincrement,
   removeFromCart,
   setLike,
-  removeLike
+  removeLike,
+  addToSave
 } = CommonReducer.actions;
 export default CommonReducer.reducer;
