@@ -7,6 +7,7 @@ import "swiper/css";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 export const Home = () => {
+
   const features = [
     {
       icon: <MapPin className='text-3xl' />,
@@ -93,7 +94,6 @@ export const Home = () => {
       title: 'СТОЛЫ И СТУЛЬЯ'
     },
   ]
-
 
   return (
     <div className='pb-20 px-4'>

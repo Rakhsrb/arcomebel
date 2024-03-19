@@ -13,6 +13,7 @@ import { Cart } from "./Pages/Cart";
 import { Search } from "./Pages/Search";
 import { User } from "./Pages/User";
 import { Saved } from "./Pages/Saved";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const router = createBrowserRouter([
