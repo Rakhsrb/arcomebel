@@ -51,7 +51,7 @@ export const Header = () => {
         <div className="container h-full flex items-center justify-between">
           <div className="flex items-center gap-5">
             <Link to={'/'}>
-              <img className="logo w-[130px]" src="./image/logo.png" alt="" />
+              <img className="logo w-[130px]" src="./image/logo.png" alt="Logo " />
             </Link>
             <div className="flex items-center gap-2">
               <PhoneCall />
